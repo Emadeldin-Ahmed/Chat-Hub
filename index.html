@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>ChatBox</title>
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="firebase-config.js"></script>
+  <script type="module" src="chat.js" defer></script>
+</head>
+<body>
+  <div id="auth">
+    <button id="googleLogin">Sign in with Google</button>
+    <button id="guestLogin">Continue as Guest</button>
+  </div>
+
+  <div id="chatApp" class="hidden">
+    <div id="userInfo">
+      Logged in as <span id="userName"></span>
+      <button id="logout">Logout</button>
+    </div>
+
+    <div id="groupList">
+      <h3>Chat Groups</h3>
+      <ul id="groups"></ul>
+    </div>
+
+    <div id="chatRoom" class="hidden">
+      <h2 id="roomTitle"></h2>
+      <div id="messages"></div>
+      <input type="text" id="messageInput" placeholder="Type a message..." />
+    </div>
+  </div>
+</body>
+</html>
